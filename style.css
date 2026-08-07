@@ -1,33 +1,63 @@
 ```css
-/* =====================================================
+/* =========================================================
    PROFESSIONAL ACADEMIC PORTFOLIO
-   Theme: Navy Blue + Teal + Gray
-   ===================================================== */
+   Standard Font Sizes
+   Theme: Navy Blue + Teal + White + Gray
+   ========================================================= */
 
-/* ---------- Global Settings ---------- */
+
+/* =========================================================
+   1. GLOBAL RESET
+   ========================================================= */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: 0.2px;
-    margin: 0;
-    padding: 0;
-    background-color: #F8FAFC;
+    line-height: 1.6;
     color: #374151;
+    background-color: #F8FAFC;
 }
 
 
-/* ---------- Headings ---------- */
+/* =========================================================
+   2. COLOR VARIABLES
+   ========================================================= */
+
+:root {
+    --navy: #17365D;
+    --blue: #1E4A73;
+    --slate: #334E68;
+
+    --teal: #0F766E;
+    --light-teal: #5EEAD4;
+
+    --text: #374151;
+    --text-light: #4B5563;
+    --muted: #6B7280;
+
+    --white: #FFFFFF;
+    --background: #F8FAFC;
+
+    --border: #D9E2EC;
+    --light-border: #E5E7EB;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
 
 h1,
 h2,
@@ -35,181 +65,599 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    line-height: 1.3;
     margin-top: 0;
 }
 
-
-/* Main Name */
-
 h1 {
-    color: #17365D;
-    font-size: 44px;
+    color: var(--navy);
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.3px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
-
-
-/* Section Heading */
 
 h2 {
-    color: #1E4A73;
-    font-size: 30px;
+    color: var(--blue);
+    font-size: 26px;
     font-weight: 650;
-    line-height: 1.3;
-    letter-spacing: 0.2px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
-
-/* Sub-heading */
-
 h3 {
-    color: #334E68;
-    font-size: 22px;
+    color: var(--slate);
+    font-size: 20px;
     font-weight: 600;
-    line-height: 1.4;
     margin-bottom: 10px;
 }
 
+h4 {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 
-/* ---------- Paragraph Text ---------- */
+h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
 
 p {
-    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-light);
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #4B5563;
-    margin-bottom: 15px;
+    line-height: 1.65;
+    margin-bottom: 14px;
 }
 
-
-/* ---------- Header ---------- */
-
-header {
-    background-color: #F8FAFC;
-    color: #374151;
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 1px solid #D9E2EC;
-}
-
-header p {
-    color: #0F766E;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    margin-top: 5px;
-}
-
-
-/* ---------- Navigation ---------- */
-
-nav {
-    background-color: #17365D;
-    padding: 16px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(23, 54, 93, 0.15);
-}
-
-nav a {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #FFFFFF;
-    margin: 0 18px;
-    text-decoration: none;
-    font-size: 15px;
+strong {
+    color: var(--blue);
     font-weight: 600;
-    letter-spacing: 0.2px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #5EEAD4;
-    text-decoration: none;
 }
 
 
-/* ---------- Main Sections ---------- */
-
-section {
-    padding: 35px;
-    background-color: #FFFFFF;
-    margin: 30px auto;
-    max-width: 1000px;
-    border-radius: 10px;
-    border: 1px solid #E5E7EB;
-    box-shadow: 0 5px 18px rgba(23, 54, 93, 0.07);
-}
-
-section p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #4B5563;
-}
-
-
-/* ---------- Links ---------- */
+/* =========================================================
+   4. LINKS
+   ========================================================= */
 
 a {
-    color: #0F766E;
-    font-weight: 500;
+    color: var(--teal);
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 a:hover {
-    color: #17365D;
+    color: var(--navy);
 }
 
 
-/* ---------- Buttons ---------- */
+/* =========================================================
+   5. HEADER
+   ========================================================= */
 
-button {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #17365D;
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-    cursor: pointer;
+header {
+    background-color: var(--background);
+    color: var(--text);
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    color: var(--navy);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--teal);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* =========================================================
+   6. PROFILE IMAGE
+   ========================================================= */
+
+.profile-img,
+img.profile {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid var(--white);
+
+    box-shadow:
+        0 5px 18px rgba(23, 54, 93, 0.15);
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
+
+nav {
+    background-color: var(--navy);
+
+    padding: 13px 15px;
+
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 8px rgba(23, 54, 93, 0.15);
+}
+
+nav a {
+    display: inline-block;
+
+    color: var(--white);
+
+    margin: 0 14px;
+
+    padding: 4px 0;
+
     font-size: 15px;
+
     font-weight: 600;
-    letter-spacing: 0.2px;
-    transition: all 0.3s ease;
+
+    text-decoration: none;
+
+    border-bottom: 2px solid transparent;
+
+    transition: 0.3s ease;
 }
 
-button:hover {
-    background-color: #0F766E;
-    transform: translateY(-2px);
+nav a:hover {
+    color: var(--light-teal);
+
+    border-bottom-color: var(--light-teal);
 }
 
 
-/* ---------- Forms ---------- */
+/* =========================================================
+   8. MAIN SECTIONS
+   ========================================================= */
 
-form {
-    max-width: 500px;
+section {
+    width: 92%;
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--light-border);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 12px rgba(23, 54, 93, 0.06);
+}
+
+
+/* Section heading */
+
+section h2 {
+    position: relative;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    background-color: var(--teal);
+
+    position: absolute;
+
+    bottom: -2px;
+    left: 0;
+}
+
+
+/* =========================================================
+   9. ABOUT TEXT
+   ========================================================= */
+
+.about-text {
+    max-width: 850px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. CARDS
+   ========================================================= */
+
+.card {
+    background-color: var(--white);
+
+    border: 1px solid var(--light-border);
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 3px 10px rgba(23, 54, 93, 0.05);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(23, 54, 93, 0.10);
+}
+
+.card h3 {
+    color: var(--navy);
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   11. GRID
+   ========================================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   12. SKILLS
+   ========================================================= */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.skill {
+    display: inline-block;
+
+    background-color: #E6F4F1;
+
+    color: var(--teal);
+
+    padding: 6px 13px;
+
+    border-radius: 18px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border: 1px solid #CDE9E5;
+}
+
+
+/* =========================================================
+   13. EXPERIENCE / EDUCATION
+   ========================================================= */
+
+.timeline {
+    max-width: 850px;
+
     margin: auto;
 }
 
-input,
-textarea {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
+.timeline-item {
+    position: relative;
+
+    border-left: 2px solid var(--teal);
+
+    padding: 0 0 25px 22px;
+
+    margin-bottom: 15px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: var(--navy);
+
+    border-radius: 50%;
+
+    left: -6px;
+    top: 5px;
+}
+
+.timeline-item h3 {
+    color: var(--navy);
+}
+
+.timeline-item .date {
+    display: block;
+
+    color: var(--teal);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   14. PROJECTS
+   ========================================================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--white);
+
+    border: 1px solid var(--light-border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(23, 54, 93, 0.10);
+}
+
+.project-card img {
     width: 100%;
-    margin: 10px 0;
-    padding: 12px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.project-card-content {
+    padding: 20px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+}
+
+.project-card a {
+    color: var(--teal);
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   15. PUBLICATIONS
+   ========================================================= */
+
+.publication {
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--light-border);
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.publication h3 {
+    color: var(--navy);
+
+    font-size: 19px;
+}
+
+.publication .journal {
+    color: var(--teal);
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   16. LISTS
+   ========================================================= */
+
+ul,
+ol {
+    margin-left: 22px;
+
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 6px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   17. BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+    margin-right: 6px;
+
+    margin-bottom: 6px;
+}
+
+.btn-primary {
+    background-color: var(--navy);
+
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--teal);
+
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: transparent;
+
+    color: var(--navy);
+
+    border: 1px solid var(--navy);
+}
+
+.btn-secondary:hover {
+    background-color: var(--navy);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   18. FORMS
+   ========================================================= */
+
+form {
+    width: 100%;
+    max-width: 550px;
+
+    margin: auto;
+}
+
+label {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    margin: 5px 0 13px;
+
     border: 1px solid #CBD5E1;
-    border-radius: 6px;
-    background-color: #FFFFFF;
-    color: #374151;
+
+    border-radius: 5px;
+
+    background-color: var(--white);
+
+    color: var(--text);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
 }
 
 textarea {
     min-height: 120px;
+
     resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 2px rgba(15, 118, 110, 0.10);
 }
 
 input::placeholder,
@@ -217,88 +665,341 @@ textarea::placeholder {
     color: #9CA3AF;
 }
 
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #0F766E;
-    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.12);
+
+/* =========================================================
+   19. FORM BUTTON
+   ========================================================= */
+
+button {
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 10px 22px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--teal);
 }
 
 
-/* ---------- Footer ---------- */
+/* =========================================================
+   20. TABLES
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 15px 0;
+
+    background-color: var(--white);
+
+    font-size: 15px;
+}
+
+th {
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    padding: 10px;
+
+    text-align: left;
+
+    font-weight: 600;
+}
+
+td {
+    padding: 10px;
+
+    border-bottom: 1px solid var(--light-border);
+
+    color: var(--text-light);
+}
+
+tr:hover td {
+    background-color: #F1F5F9;
+}
+
+
+/* =========================================================
+   21. SOCIAL LINKS
+   ========================================================= */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--teal);
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   22. CONTACT
+   ========================================================= */
+
+.contact-info {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+.contact-info a {
+    color: var(--teal);
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   23. FOOTER
+   ========================================================= */
 
 footer {
-    background-color: #17365D;
-    color: #FFFFFF;
+    background-color: var(--navy);
+
+    color: var(--white);
+
     text-align: center;
-    padding: 25px 20px;
-    margin-top: 50px;
+
+    padding: 22px 20px;
+
+    margin-top: 35px;
 }
 
 footer p {
-    font-size: 14px;
     color: #E5E7EB;
-    line-height: 1.6;
+
+    font-size: 14px;
+
     margin: 0;
 }
 
 footer a {
-    color: #5EEAD4;
-    text-decoration: none;
+    color: var(--light-teal);
+
+    font-size: 14px;
 }
 
 
-/* ---------- Section Heading Line ---------- */
+/* =========================================================
+   24. IMAGES
+   ========================================================= */
 
-section h2 {
-    border-bottom: 2px solid #D9E2EC;
-    padding-bottom: 10px;
+img {
+    max-width: 100%;
+
+    height: auto;
+}
+
+img.rounded {
+    border-radius: 8px;
 }
 
 
-/* ---------- Responsive Design ---------- */
+/* =========================================================
+   25. HORIZONTAL LINE
+   ========================================================= */
 
-@media (max-width: 768px) {
+hr {
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+    margin: 25px 0;
+}
+
+
+/* =========================================================
+   26. INFORMATION / HIGHLIGHT BOX
+   ========================================================= */
+
+.highlight {
+    background-color: #EEF4F8;
+
+    border-left: 4px solid var(--teal);
+
+    padding: 15px 18px;
+
+    margin: 15px 0;
+
+    border-radius: 4px;
+}
+
+.highlight p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   27. RESUME LINK
+   ========================================================= */
+
+.resume-link {
+    display: inline-block;
+
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-top: 8px;
+
+    transition: 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: var(--teal);
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   28. TEXT UTILITIES
+   ========================================================= */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.text-teal {
+    color: var(--teal);
+}
+
+.text-navy {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   29. RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
 
     h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     h2 {
-        font-size: 27px;
+        font-size: 25px;
     }
 
     h3 {
         font-size: 20px;
     }
 
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        width: 94%;
+        padding: 28px;
+    }
+}
+
+
+/* =========================================================
+   30. RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
     body {
         font-size: 15px;
     }
 
     header {
-        padding: 40px 15px;
+        padding: 35px 15px;
     }
 
-    nav {
-        padding: 12px;
+    header h1 {
+        font-size: 30px;
     }
 
-    nav a {
-        margin: 0 8px;
-        font-size: 14px;
+    header p {
+        font-size: 16px;
     }
-
-    section {
-        margin: 20px 12px;
-        padding: 25px;
-    }
-}
-
-
-/* ---------- Small Mobile Screens ---------- */
-
-@media (max-width: 480px) {
 
     h1 {
         font-size: 30px;
@@ -312,17 +1013,60 @@ section h2 {
         font-size: 19px;
     }
 
-    header p {
-        font-size: 16px;
+    nav {
+        padding: 10px 5px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px 7px;
+        margin: 3px 6px;
+        font-size: 14px;
     }
 
     section {
-        padding: 20px;
+        width: 94%;
+        margin: 18px auto;
+        padding: 22px 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-img,
+    img.profile {
+        width: 120px;
+        height: 120px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   31. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    section {
+        padding: 18px 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 3px 5px;
     }
 }
 ```

@@ -1,74 +1,263 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
+```css
+/* =====================================================
+   PROFESSIONAL ACADEMIC PORTFOLIO
+   Color Theme: Navy Blue + Teal + Gray
+   ===================================================== */
+
+/* ---------- General ---------- */
+
+* {
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #F8FAFC;
-    color: #17365D;
-    padding: 30px 20px;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background-color: #F8FAFC;
+    color: #374151;
+    line-height: 1.7;
+}
+
+
+/* ---------- Headings ---------- */
+
 h1 {
-    color: #17365D;   /* Deep Navy Blue */
+    color: #17365D;          /* Deep Navy Blue */
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
 }
 
 h2 {
-    color: #0F5B66;   /* Dark Teal */
+    color: #1E4A73;          /* Professional Blue */
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 h3 {
-    color: #334E68;   /* Slate Blue */
+    color: #334E68;          /* Slate Blue */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: #F8FAFC;
+    color: #374151;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #D9E2EC;
+}
+
+header p {
+    color: #0F766E;          /* Teal */
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+
+/* ---------- Navigation ---------- */
 
 nav {
     background-color: #17365D;
-    padding: 15px;
+    padding: 16px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(23, 54, 93, 0.15);
 }
+
 nav a {
-    color: white;
-    margin: 0 15px;
+    color: #FFFFFF;
+    margin: 0 18px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
+
 nav a:hover {
-    color: #A7DAD4;
+    color: #5EEAD4;          /* Light Teal */
     text-decoration: none;
 }
+
+
+/* ---------- Main Sections ---------- */
 
 section {
-    padding: 20px;
-    background: white;
-    margin: 20px;
-    border-radius: 5px;
+    padding: 35px;
+    background-color: #FFFFFF;
+    margin: 30px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 5px 18px rgba(23, 54, 93, 0.07);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+section p {
+    color: #4B5563;
+    font-size: 16px;
 }
 
-form {
-    max-width: 400px;
-    margin: auto;
+
+/* ---------- Links ---------- */
+
+a {
+    color: #0F766E;
 }
 
-input, textarea, button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
+a:hover {
+    color: #17365D;
 }
+
+
+/* ---------- Buttons ---------- */
 
 button {
-    background-color: #333;
-    color: white;
+    background-color: #17365D;
+    color: #FFFFFF;
     border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #0F766E;
+    transform: translateY(-2px);
 }
+
+
+/* ---------- Forms ---------- */
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #374151;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0F766E;
+    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.12);
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #17365D;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #5EEAD4;
+    text-decoration: none;
+}
+
+
+/* ---------- Section Titles ---------- */
+
+section h2 {
+    border-bottom: 2px solid #D9E2EC;
+    padding-bottom: 10px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    nav {
+        padding: 12px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 20px 12px;
+        padding: 25px;
+    }
+}
+
+
+/* ---------- Small Mobile Screens ---------- */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+```

@@ -10,6 +10,16 @@ header {
     padding: 30px 20px;
     text-align: center;
 }
+h1 {
+    color: #17365D;   /* Deep Navy Blue */
+}
+
+h2 {
+    color: #0F5B66;   /* Dark Teal */
+}
+
+h3 {
+    color: #334E68;   /* Slate Blue */
 
 nav {
     background-color: #17365D;
